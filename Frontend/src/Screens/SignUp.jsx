@@ -18,6 +18,8 @@ const SignUp = () => {
         if(!json.success){
             alert("Enter Valid Creds")
         }
+        if(json.success){
+        }
     }
     const onChange=(event)=>{
         setCreds({...creds,[event.target.name]:event.target.value})

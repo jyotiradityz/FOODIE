@@ -11,13 +11,13 @@ const Caraousel = () => {
                     </form>
                 </div>
                 <div class="carousel-item active">
-                    <img src="https://source.unsplash.com/random/900x700/?burger" class="d-block w-100" alt="..." />
+                    <img src="https://source.unsplash.com/random/1800x1000/?burger" class="d-block w-100" alt="..." />
                 </div>
                 <div class="carousel-item active">
-                    <img src="https://source.unsplash.com/random/900x700/?food" class="d-block w-100" alt="..." />
+                    <img src="https://source.unsplash.com/random/1800x1000/?burger" class="d-block w-100" alt="..." />
                 </div>
                 <div class="carousel-item active">
-                    <img src="https://source.unsplash.com/random/900x700/?pizza" class="d-block w-100" alt="..." />
+                    <img src="https://source.unsplash.com/random/1800x1000/?burger" class="d-block w-100" alt="..." />
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
