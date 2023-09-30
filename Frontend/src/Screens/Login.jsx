@@ -20,6 +20,8 @@ const Login = () => {
       alert("Enter Valid Creds")
     }
     if (json.success) {
+      localStorage.setItem("authToken",json.authToken)
+      console.log(localStorage.getItem("authToken"));
       navigate("/");
     }
   }
