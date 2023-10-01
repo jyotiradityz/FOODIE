@@ -1,12 +1,16 @@
 import React from 'react'
-const img1 = 'https://media01.stockfood.com/largepreviews/NDE0NTQyMjMw/13372330-Burger-with-cheese-and-lettuce-against-a-black-background.jpg';
-const Card = () => {
+const img1 = 'https://www.teenaagnel.com/wp-content/uploads/2019/12/food-photography-in-dubai.jpg';
+const Card = (props) => {
+
+    let option=props.options;
+    let priceoptions=Object.keys(option)
+
     return (
         <div className="flex card mt-3 m-3" style={{ "background": "#191d2b", 'color': "#00d9ff", "width": "18rem", "maxHeight": "360px" }}>
-            <img src={img1} className="card-img-top" alt="..." />
+            <img src={props.imgSrc} className="card-img-top" alt="..." />
             <div className="card-body">
-                <h5 className="card-title">Burger</h5>
-                <p className="card-text">Very Tasty thing</p>
+                <h5 className="card-title">{props.foodName}</h5>
+                <p className="card-text">{props.desc}</p>
                 <div className='container w-100'>
                     <select className='m-2 h-100 '  >
                         {
@@ -18,8 +22,11 @@ const Card = () => {
                         }
                     </select>
                     <select className='m-2 h-100 rounded'>
-                        <option value="Half">Half</option>
-                        <option value="Full">Full</option>
+                        {
+                            priceoptions.map((data)=>{
+                                return <option key={data} value={data}>{data}</option>
+                            })
+                        }
                     </select>
                     <div className='d-inline h-100 fs-5'>Price</div>
                 </div>
