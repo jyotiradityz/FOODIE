@@ -53,7 +53,7 @@ const SignUp = () => {
             <input type="text" className="form-control" name='geolocation' value={creds.geolocation} onChange={onChange}/>
 
                     </div>
-                    <button type="submit" className="m-3 btn btn-failure" style={{background:"#191d2b",border:"1px solid white"}}>Submit</button>
+                    <button type="submit"  className="m-3 btn btn-failure" style={{background:"#191d2b",border:"1px solid white"}}>Submit</button>
                     <Link to='/login' className='m-3 btn btn-danger'>Already a User</Link>
                 </form>
             </div>

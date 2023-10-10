@@ -22,23 +22,23 @@ const Navbar = () => {
               <li className="nav-item">
                 <Link className="nav-link active fs-5 " aria-current="page" style={{ 'color': "#00d9ff" }} to="/login">Home</Link>
               </li>
-              {(localStorage.getItem("authToken")) ?
+              {/* {(localStorage.getItem("authToken")) ?
                 <li className='nav-item'>
                   <Link className="nav-link active fs-5 " aria-current="page" to="/" style={{ 'color': "#00d9ff" }}>My Orderes</Link>
                 </li>
-                : ""}
+                : ""} */}
             </ul>
             {(!localStorage.getItem("authToken")) ?
               <div className='d-flex ms-auto'>
-                <Link className="btn bg-white mx-1" to="/login" style={{ 'color': "#00d9ff",zIndex:"10" }}>Login</Link>
-                <Link className="btn bg-white mx-1" to="/createuser" style={{ 'color': "#00d9ff",zIndex:"10" }}>SignUp</Link>
+                <Link className="btn bg-white  mx-1" to="/login" style={{ 'color': "#00d9ff" }}>Login</Link>
+                <Link className="btn bg-white  mx-1" to="/createuser" style={{ 'color': "#00d9ff" }}>SignUp</Link>
               </div>
               :
               <div>
-                <div className='btn bg-white mx-2 fs-5' style={{ 'color': "#00d9ff",zIndex:"10" }}>
+                <div className='btn bg-white mx-2 fs-5' style={{ 'color': "#00d9ff" }}>
                   MyCart
                 </div>
-                <div className='btn bg-white mx-2 fs-5' style={{ 'color': "red",zIndex:"10" }} onClick={logout}>
+                <div className='btn bg-white mx-2 fs-5' style={{ 'color': "red" }} onClick={localStorage.removeItem("authToken")}>
                   Logout
                 </div>
               </div>
