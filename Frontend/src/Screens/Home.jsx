@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import Navbar from '../Components/Navbar/Navbar';
 import Footer from '../Components/Footer';
@@ -11,7 +10,7 @@ import Card from '../Components/Card/Card'
 const Home = () => {
   const [foodCat, setFoodCat] = useState([]);
   const [foodItem, setFoodItem] = useState([]);
-  const [searchQuery, setSearchQuery] = useState(""); // Add search query state
+  const [searchQuery, setSearchQuery] = useState("");
 
   const loadData = async () => {
     let res = await fetch("http://localhost:5000/api/foodData", {
