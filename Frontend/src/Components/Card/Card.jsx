@@ -7,8 +7,8 @@ const Card = (props) => {
     let priceoptions = Object.keys(option)
 
     return (
-        <div className="flex card mt-3 m-3" style={{ "background": "#191d2b", 'color': "#00d9ff", "width": "18rem", "maxHeight": "360px" }}>
-            <img src={props.imgSrc} className="card-img-top" alt="..." style={{ height: "180px", objectFit: "fill" }} />
+        <div className="card mt-3 m-2" style={{ "background": "#191d2b", 'color': "#00d9ff", "width": "18rem", "maxHeight": "360px" }}>
+            <img src={props.imgSrc} className="card-img-top" alt="..." style={{height:"180px"}}/>
             <div className="card-body">
                 <h5 className="card-title">{props.foodName}</h5>
                 <p className="card-text">{props.desc}</p>
