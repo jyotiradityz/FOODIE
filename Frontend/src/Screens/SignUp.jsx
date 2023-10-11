@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-
+import { ToastContainer, toast } from 'react-toastify';
 const SignUp = () => {
-
+    const notify = () => toast("Registered!");
     const [creds,setCreds]=useState({name:"",email:"",password:"",geolocation:"",})
     const handleSubmit=async(e)=>{
         e.preventDefault();
         const res=await fetch("http://localhost:5000/api/createuser",{
             method:'POST',
             headers:{
-                'Content-Type':'application/json'
+                'Content-Type':'application/json' 
             },
             body:JSON.stringify({name:creds.name,email:creds.email,password:creds.password,location:creds.geolocation})
         });
@@ -53,7 +53,7 @@ const SignUp = () => {
             <input type="text" className="form-control" name='geolocation' value={creds.geolocation} onChange={onChange}/>
 
                     </div>
-                    <button type="submit"  className="m-3 btn btn-failure" style={{background:"#191d2b",border:"1px solid white"}}>Submit</button>
+                    <button type="submit"  className="m-3 btn btn-failure" style={{background:"#191d2b",border:"1px solid white"}} onClick={notify}>Submit</button>
                     <Link to='/login' className='m-3 btn btn-danger'>Already a User</Link>
                 </form>
             </div>
